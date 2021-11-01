@@ -45,6 +45,8 @@ public class from11to20 {
 	}
 
 	public static int getDecimalPlaces(String theNumber) {
+		if (theNumber.split("\\.").length == 1)
+			return 0;
 		return theNumber.split("\\.")[1].length();
 	}
 
@@ -52,7 +54,7 @@ public class from11to20 {
 		int fZero = 0;
 		int fFirst = 1;
 		int fNext = 0;
-		for (int i = 2; i <= Fibo + 1; ++i) {
+		for (int i = 2; i <= Fibo + 1; i++) {
 			fNext = fZero + fFirst;
 			fZero = fFirst;
 			fFirst = fNext;
@@ -66,7 +68,13 @@ public class from11to20 {
 		return false;
 	}
 	static boolean isStrangePair(String first, String second) {
-        return first.charAt(0) == second.charAt(second.length() - 1) && first.charAt(first.length() - 1) == second.charAt(0);
+        if (second.length() == 0 || first.length() == 0)
+        {
+        	System.out.print("One argument is not stated; ");
+        	return false;
+        }
+        else
+		return first.charAt(0) == second.charAt(second.length() - 1) && first.charAt(first.length() - 1) == second.charAt(0);
     }
 	static boolean isPrefix(String word, String prefix) {
         return word.startsWith(word.substring(0, prefix.length() - 1));
@@ -96,10 +104,10 @@ public class from11to20 {
 		System.out.println(isAvgWhole(arrayForEx13));
 		int[] arrayForEx14 = { 3, 3, -2, 408, 3, 3 };
 		System.out.println(Arrays.toString(cumulativeSum(arrayForEx14)));
-		System.out.println(getDecimalPlaces("43.2020"));
+		System.out.println(getDecimalPlaces("43.2000"));
 		System.out.println(Fibonacci(12));
 		System.out.println(isValid("55520"));
-		System.out.println(isStrangePair("sparkling", "groups"));
+		System.out.println(isStrangePair("sparkling", ""));
 		System.out.println(isPrefix("automation", "auto-"));
 		System.out.println(isSuffix("vocation", "-logy"));
 		System.out.println(boxSeq(3));
