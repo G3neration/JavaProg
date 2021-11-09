@@ -67,36 +67,39 @@ public class from11to20 {
 			return index.matches("\\d+");
 		return false;
 	}
-	static boolean isStrangePair(String first, String second) {
-        if (second.length() == 0 || first.length() == 0)
-        {
-        	System.out.print("One argument is not stated; ");
-        	return false;
-        }
-        else
-		return first.charAt(0) == second.charAt(second.length() - 1) && first.charAt(first.length() - 1) == second.charAt(0);
-    }
-	static boolean isPrefix(String word, String prefix) {
-        return word.startsWith(word.substring(0, prefix.length() - 1));
-    }
 
-    static boolean isSuffix(String word, String suffix) {
-        return word.endsWith(suffix.substring(1, suffix.length()));
-    }
+	static boolean isStrangePair(String first, String second) {
+		if (second.length() == 0 || first.length() == 0) {
+			System.out.print("One argument is not stated; ");
+			return false;
+		} else
+			return first.charAt(0) == second.charAt(second.length() - 1)
+					&& first.charAt(first.length() - 1) == second.charAt(0);
+	}
+
+	static boolean isPrefix(String word, String prefix) {
+		return word.startsWith(word.substring(0, prefix.length() - 1));
+	}
+
+	static boolean isSuffix(String word, String suffix) {
+		return word.endsWith(suffix.substring(1, suffix.length()));
+	}
+
 	static int boxSeq(int step) {
 		int howMany = 0;
-		if (step == 0)
-		{
+		if (step == 0) {
 			return howMany;
-		}
-		else for (int i = 1; i <= step; i++) {
-			if (i % 2 == 1)
-				howMany += 3;
-			else howMany -= 1;
-		}
+		} else
+			for (int i = 1; i <= step; i++) {
+				if (i % 2 == 1)
+					howMany += 3;
+				else
+					howMany -= 1;
+			}
 		return howMany;
 	}
-    public static void main(String[] args) {
+
+	public static void main(String[] args) {
 		System.out.println(repeat("mice", 5));
 		int[] arrayForEx12 = { 10, 4, 1, 4, -10, -50, 32, 21 };
 		System.out.println(differenceMaxMin(arrayForEx12));
