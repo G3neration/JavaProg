@@ -115,25 +115,23 @@ public class from21to30 {
 	}
 
 	static public int nextPrime(int numForEx28) {
-		double dNumForEx28 = Double.valueOf(numForEx28);
-		if (numForEx28 == 1 || numForEx28 == 0)
-			return numForEx28;
-		else if (numForEx28 <= 0)
-			return 1;
+		int ost = 1; 
+	if (numForEx28 <= 2)
+			return 2;
 		else
-			for (double i = 2; i <= numForEx28 - 1; i++) {
-				if (Math.pow(i, dNumForEx28) % dNumForEx28 == i % numForEx28)
-					return numForEx28;
-				else
-					for (double j = dNumForEx28; j < Integer.MAX_VALUE; j++) {
-						for (int k = 2; k <= i - 1; k++)
-							if ((Math.pow(k, j) % j == k % j)) {
-								int res = (int) Math.round(j);
-								return res;
-							}
+			for (int j = numForEx28; j < Integer.MAX_VALUE; j++) {
+					boolean res = true;
+						for (int k = 2; k < j; k++)
+						{
+							ost = j % k;
+						if (ost == 0) {
+							res = false;
+						}
+						}
+						if (res == true)
+						return j;
 					}
-			}
-		return 312; // Leet version of Err
+	return 312; // Leet version of Err
 	}
 
 	public static boolean rightTriangle(int aSide, int bSide, int cSide) {
@@ -152,7 +150,7 @@ public class from21to30 {
 		System.out.println(same(arr1, arr2));
 		System.out.println(isKaprekar(297));
 		System.out.println(longestZero("00111000011"));
-		System.out.println(nextPrime(25));
+		System.out.println(nextPrime(88));
 		System.out.println(rightTriangle(145, 105, 100));
 	}
 }
