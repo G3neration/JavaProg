@@ -115,23 +115,22 @@ public class from21to30 {
 	}
 
 	static public int nextPrime(int numForEx28) {
-		int ost = 1; 
-	if (numForEx28 <= 2)
+		int ost = 1;
+		if (numForEx28 <= 2)
 			return 2;
 		else
 			for (int j = numForEx28; j < Integer.MAX_VALUE; j++) {
-					boolean res = true;
-						for (int k = 2; k < j; k++)
-						{
-							ost = j % k;
-						if (ost == 0) {
-							res = false;
-						}
-						}
-						if (res == true)
-						return j;
+				boolean res = true;
+				for (int k = 2; k < j; k++) {
+					ost = j % k;
+					if (ost == 0) {
+						res = false;
 					}
-	return 312; // Leet version of Err
+				}
+				if (res == true)
+					return j;
+			}
+		return 312; // Leet version of Err
 	}
 
 	public static boolean rightTriangle(int aSide, int bSide, int cSide) {

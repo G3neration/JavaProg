@@ -7,6 +7,7 @@ public class Primes {
 				System.out.println(n);
 		}
 	}
+
 	// Метод isPrime производит все вычисления для определения простого числа
 	public static boolean isPrime(int n) {
 		boolean res = true;
