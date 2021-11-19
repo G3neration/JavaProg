@@ -70,8 +70,7 @@ public class from11to20 {
 
 	static boolean isStrangePair(String first, String second) {
 		if (second.length() == 0 || first.length() == 0) {
-			System.out.print("One argument is not stated; ");
-			return false;
+			return true;
 		} else
 			return first.charAt(0) == second.charAt(second.length() - 1)
 					&& first.charAt(first.length() - 1) == second.charAt(0);
@@ -107,7 +106,7 @@ public class from11to20 {
 		System.out.println(isAvgWhole(arrayForEx13));
 		int[] arrayForEx14 = { 3, 3, -2, 408, 3, 3 };
 		System.out.println(Arrays.toString(cumulativeSum(arrayForEx14)));
-		System.out.println(getDecimalPlaces("43.2000"));
+		System.out.println(getDecimalPlaces("43"));
 		System.out.println(Fibonacci(12));
 		System.out.println(isValid("55520"));
 		System.out.println(isStrangePair("sparkling", ""));
