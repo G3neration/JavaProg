@@ -29,7 +29,6 @@ public class FractalExplorer {
 
 	public void createAndShowGUI() {
 		frame = new JFrame("FractalExplorer");
-
 		reset = new JButton("Reset Display");
 		reset.addActionListener(e -> {
 			fg.getInitialRange(area);
