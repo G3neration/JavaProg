@@ -165,7 +165,6 @@ public class from31to40 {
 		char[] chars = stringSequence.toCharArray();
 		char[] blackList = new char[stringSequence.length()];
 		int unique = 0;
-		int count = 0;
 		for (int i = 0; i < chars.length; i++)
 			if (chars[i] == bookEnd)
 				for (int j = i + 1; j < chars.length; j++) {

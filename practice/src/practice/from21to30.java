@@ -130,7 +130,7 @@ public class from21to30 {
 				if (res == true)
 					return j;
 			}
-		return 312; // Leet version of Err
+		return 312;
 	}
 
 	public static boolean rightTriangle(int aSide, int bSide, int cSide) {
